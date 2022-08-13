@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <script type="text/javascript" src="/jquery/jquery-3.6.0.min.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="heading">
+      <h1><span style="font-style: italic">EMOJIFY</span> BALLS!!</h1>
+      <h2>
+        In publishing and graphic design, Lorem ipsum is a placeholder text
+        commonly used to demonstrate
+      </h2>
+    </div>
+
+    <div class="box">
+      <textarea
+        id="intput"
+        class="intputStyle"
+        placeholder="Enter the copypasta!"
+        rows="10"
+        cols="70"
+      ></textarea>
+    </div>
+
+    <div class="buttons">
+      <button class="custom-btn" id="replace" onclick="obtainText()">Replace Text</button>
+      <button class="custom-btn">Emojify 😍</button>
+    </div>
+
     
-        <div class="heading">
-            <h1><span style="font-style:italic">EMOJIFY</span> BALLS!!</h1>
-            <h2>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate </h2>
-        </div>
-
-        <div class="box">
-            <textarea id="intput" placeholder="Enter the copypasta!" id="text" rows="10" cols="70" ></textarea>
-
-
-        </div>
-
-        <div class="buttons">
-            <button class="custom-btn">Replace Text</button>
-            <button class="custom-btn">Emojify 😍</button> 
-
-        </div>
-
-
-
-    
+    <div class="output" id="output"
+    style="visibility:hidden">
+      <textarea
+      id="outputText"
+      class="outputStyle"
+      placeholder="Enter your Copypasta in the box above!"
+      rows="10"
+      cols="70"
+      style="overflow-y:auto;"
+    ></textarea>
+    <input type="image" id="copy" class="btn" onclick="copy();" src="./images/copy.svg"></input>
+    </div>
     <script src="./js/index.js"></script>
-</body>
+
+    <!-- <div id="inputBox">
+      <textarea rows="3" class="inputBoxStyle" placeholder="Enter word to replace"></textarea>
+    </div> -->
+  </body>
 </html>

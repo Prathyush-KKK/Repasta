@@ -79,7 +79,7 @@ th {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;1,700; 1,800; 0,800&display=swap');
 
 html {
-    height: 100%;
+    height: fit-content;
 }
 
 body {
@@ -108,34 +108,39 @@ h1 {
 }
 
 .heading {
-    margin-bottom: 1em;
+    margin-bottom: 2.5em;
 }
 
-#intput {
+.intputStyle, .outputStyle{
     background-color: #00001a;
     color: white;
     resize: none;
     overflow: hidden;
-
 }
 
-#intput:hover {
+.intputStyle:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    
+}
+
+.output:hover {
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+    
 }
 
-
 .buttons {
-    width: 40%;
+    width: 100%;
 }
 
 
 
 .custom-btn {
-    margin-top: 3rem;
+    margin-top: 1rem;
     font-size: 1.5em;
-    margin: 5%;
+    margin: 2%;
     color: #fff;
     border-radius: 5px;
     padding: 10px 25px;
@@ -146,8 +151,8 @@ h1 {
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-    background: rgb(6, 14, 131);
-    background: linear-gradient(0deg, rgba(6, 14, 131, 1) 0%, rgba(12, 25, 180, 1) 100%);
+    background: #142C82;
+    background: linear-gradient(0deg, rgb(21, 25, 85) 0%, rgb(37, 44, 114) 100%);
     border: none;
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
         7px 7px 20px 0px rgba(0, 0, 0, .1),
@@ -160,16 +165,42 @@ h1 {
     background: linear-gradient(0deg, rgba(0, 3, 255, 1) 0%, rgba(2, 126, 251, 1) 100%);
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #0e0e2b; 
+}
 
 
+.hidden{
+    visibility: hidden;
+}
 
+.output{
+    position:relative;
+}
 
+.output textarea{
+    display: block;
+    width: 100% !important;
+}
 
-
-
-
-
-
+.output .btn {
+    padding: 3px 3px;
+    font-size: 20px;
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+  }
 
 
 @media only screen and (max-width: 649px) {
@@ -181,4 +212,11 @@ h1 {
         font-size: 0.9em;
         margin-top: 0%;
     }
+}
+
+
+
+.inputBox .inputBoxStyle{
+    background-color: #00001a;
+    color: white;
 }
