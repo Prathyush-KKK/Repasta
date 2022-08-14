@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Repasta</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <div class="heading">
-      <h1><span style="font-style: italic">EMOJIFY</span> BALLS!!</h1>
+      <h1><span style="font-style: italic">Repasta</span> it!</h1>
       <h2>
-        In publishing and graphic design, Lorem ipsum is a placeholder text
-        commonly used to demonstrate
+        Enter the word from a copypasta you want to replace with your choice of word!
       </h2>
     </div>
 
@@ -25,11 +24,16 @@
         rows="10"
         cols="70"
       ></textarea>
+      <div id="inputBox" class="inputBox">
+        <textarea class="inputBoxStyle" id="replaceIn" placeholder="Enter word to replace"></textarea>
+        <textarea class="inputBoxStyle" id="replaceOut" placeholder="Enter the replace word"></textarea>
+      </div>
+
+  
     </div>
 
     <div class="buttons">
       <button class="custom-btn" id="replace" onclick="obtainText()">Replace Text</button>
-      <button class="custom-btn">Emojify 😍</button>
     </div>
 
     
@@ -45,10 +49,9 @@
     ></textarea>
     <input type="image" id="copy" class="btn" onclick="copy();" src="./images/copy.svg"></input>
     </div>
-    <script src="./js/index.js"></script>
 
-    <!-- <div id="inputBox">
-      <textarea rows="3" class="inputBoxStyle" placeholder="Enter word to replace"></textarea>
-    </div> -->
+
+
+    <script src="./js/index.js"></script>
   </body>
 </html>

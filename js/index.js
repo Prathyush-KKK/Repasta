@@ -17,7 +17,14 @@ function autoResize() {
 function obtainText(){
     var txt = document.getElementById("intput").value;
     console.log(txt);
-    var rep = txt.replace(/sister/gi, "Allah");
+    var repIn = document.getElementById("replaceIn").value;
+    var repOut = document.getElementById("replaceOut").value;
+    if(repIn.length>1){
+        var rep = txt.replace(repIn, repOut);
+    }
+    else{
+    var rep = txt.replace(/\s${repIn}\s/gi,repOut);
+    }
     console.log(rep)
     answer(rep);
 }
