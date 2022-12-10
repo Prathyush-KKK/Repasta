@@ -23,15 +23,13 @@ function replaceText(){
     var get = getText();
     var In = get.repIn;
     var Out = get.repOut;
-    
     var rep = document.getElementById("intput").value;
     for(var i=0;i<In.length; i++){
-    console.log(In, Out)
     var regex = new RegExp(`\\b${In[i]}\\b|^${In[i]}\\b|\\b${In[i]}$|\\b${In[i]}-`, "gi");
     var rep = rep.replace(regex, Out[i]);
-    console.log(rep)
 }
-    answer(rep);
+    var txt = rep.replace("undefined", "")
+    answer(txt);
 }
 
 
