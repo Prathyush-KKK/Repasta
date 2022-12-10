@@ -7,12 +7,13 @@
     <title>Repasta</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
   </head>
   <body>
     <div class="heading">
       <h1><span style="font-style: italic">Repasta</span> it!</h1>
       <h2>
-        Enter the word from a copypasta you want to replace with your choice of word!
+        Enter words from a copypasta which you want to replace with your choice of words!
       </h2>
     </div>
 
@@ -20,20 +21,20 @@
       <textarea
         id="intput"
         class="intputStyle"
-        placeholder="Enter the copypasta!"
+        placeholder="The quick brown fox jumped over the lazy dog"
         rows="10"
         cols="70"
       ></textarea>
       <div id="inputBox" class="inputBox">
-        <textarea class="inputBoxStyle" id="replaceIn" placeholder="Enter word to replace"></textarea>
-        <textarea class="inputBoxStyle" id="replaceOut" placeholder="Enter the replace word"></textarea>
+        <textarea class="inputBoxStyle" id="replaceIn" placeholder="fox, lazy"></textarea>
+        <textarea class="inputBoxStyle" id="replaceOut" placeholder="cheetah, lethargic"></textarea>
       </div>
 
   
     </div>
 
     <div class="buttons">
-      <button class="custom-btn" id="replace" onclick="obtainText()">Replace Text</button>
+      <button class="custom-btn" id="replace" onclick="replaceText()">Replace Text</button>
     </div>
 
     
@@ -42,7 +43,7 @@
       <textarea
       id="outputText"
       class="outputStyle"
-      placeholder="Enter your Copypasta in the box above!"
+      placeholder="The quick brown fox jumped over the lethargic dog"
       rows="10"
       cols="70"
       style="overflow-y:auto;"

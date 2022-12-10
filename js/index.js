@@ -1,8 +1,4 @@
-
-
-
 fluid();
-
 
 function fluid(){
 textarea = document.querySelector(".intputStyle");
@@ -14,20 +10,30 @@ function autoResize() {
     this.style.height = this.scrollHeight + 'px';
 }
 
-function obtainText(){
-    var txt = document.getElementById("intput").value;
-    console.log(txt);
+function getText(){
     var repIn = document.getElementById("replaceIn").value;
+    repIn = repIn.split(/[ ,]+/);
     var repOut = document.getElementById("replaceOut").value;
-    if(repIn.length>1){
-        var rep = txt.replace(repIn, repOut);
-    }
-    else{
-    var rep = txt.replace(/\s${repIn}\s/gi,repOut);
-    }
+    repOut = repOut.split(/[ ,]+/);
+    return {repIn, repOut};
+}
+
+
+function replaceText(){
+    var get = getText();
+    var In = get.repIn;
+    var Out = get.repOut;
+    
+    var rep = document.getElementById("intput").value;
+    for(var i=0;i<In.length; i++){
+    console.log(In, Out)
+    var regex = new RegExp(`\\b${In[i]}\\b|^${In[i]}\\b|\\b${In[i]}$|\\b${In[i]}-`, "gi");
+    var rep = rep.replace(regex, Out[i]);
     console.log(rep)
+}
     answer(rep);
 }
+
 
 function answer(rep){
     var disp = document.getElementById("output")

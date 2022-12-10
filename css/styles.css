@@ -119,16 +119,21 @@ h1 {
 }
 
 .intputStyle:hover{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.015);
+    transform: scale(1.015);
     
 }
 
 .output:hover {
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.015);
+    transform: scale(1.015);
     
+}
+
+#copy:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .buttons {
@@ -216,6 +221,7 @@ h1 {
 .inputBox{
     display: flex;
     justify-content: center;
+    padding-top: 20px;
 }
 .inputBox .inputBoxStyle{
     background-color: #00001a;
